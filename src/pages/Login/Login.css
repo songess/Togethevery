@@ -1,0 +1,37 @@
+.login_form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow:  5px 5px 0px #666666,
+             -5px -5px 0px #ffffff;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+.login_content {
+  width:100%;
+}
+
+.error{
+  color: red;
+  font-size: 12px;
+}
+
+.login_pw{
+  margin-top: 5px;
+}
+
+.showError{
+  border: 1px solid red;
+}
+
+.loginInput_size{
+  width: 100%;
+}

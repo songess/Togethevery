@@ -1,0 +1,70 @@
+.memoModal_background {
+  background-color: rgba(128,128,128,0.9);
+
+  width: 100vw;
+  height: 100vh;
+  z-index: 998;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.memoModal {
+  width: 400px;
+  height: 200px;
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 20px;
+  border-radius: 23px;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 0px #a7a7a7;
+}
+
+.memoModal_title {
+  margin-bottom: 15px;
+}
+
+.memoModal_content {
+  color: gray;
+  margin-bottom: 15px;
+}
+
+.memoModal_button_delete {
+  border: none;
+  background-color: #ff3333;
+  font-size: 15px;
+  width: 64px;
+  height: 40px;
+  color: white;
+  border-radius: 5px;
+}
+
+.memoModal_button_delete:hover {
+  background-color: #f90000;
+  cursor: pointer;
+}
+
+.memoModal_button_close {
+  border: none;
+  background-color: rgb(162, 162, 162);
+  font-size: 15px;
+  width: 64px;
+  height: 40px;
+  color: white;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.memoModal_button_close:hover {
+  background-color: rgb(122, 122, 122);
+  cursor: pointer;
+}
+
+.memoModal_button {
+  display: flex;
+  justify-content: end;
+}

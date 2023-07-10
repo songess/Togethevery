@@ -1,0 +1,45 @@
+.memoList_list {
+  display: flex;
+  position: relative;
+  align-items: center;
+  background-color: white;
+  width: 90%;
+  height:8vh;
+  min-height: 8vh;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.memoList_title{
+  position: absolute;
+  max-width: 180px;
+  left:30px;
+  font-size: 20px;
+  font-weight: 700;
+  width:700;
+}
+
+.memoList_button {
+  display: flex;
+  position: absolute;
+  right:10px;
+}
+
+.memoList_space {
+  margin-right: 10px;
+}
+
+.memoList_input {
+  width:50%;
+  position: absolute;
+  left: 150px;
+}
+
+.memoList_content {
+  position: absolute;
+  left:200px;
+  max-width:600px;
+  max-height: 50px;
+  overflow: scroll;
+}

@@ -1,0 +1,22 @@
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+div#root {
+  height: 100%;
+}

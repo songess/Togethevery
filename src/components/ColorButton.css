@@ -1,0 +1,43 @@
+.color_button {
+  --color: #0077ff;
+  font-family: inherit;
+  display: inline-block;
+  width: 5em;
+  height: 2.4em;
+  overflow: hidden;
+  font-size: 17px;
+  z-index: 1;
+  color: var(--color);
+  border: none;
+  border-radius: 6px;
+  position: relative;
+}
+
+.color_button::before {
+  position: absolute;
+  content: "";
+  background: var(--color);
+  width: 150px;
+  height: 200px;
+  z-index: -1;
+  border-radius: 50%;
+  top: 100%;
+  left: 100%;
+  transition: .3s all;
+}
+
+.color_button:hover {
+  color: white;
+  cursor: pointer;
+}
+
+/* .color_button:before {
+  top: 100%;
+  left: 100%;
+  transition: .3s all;
+} */
+
+.color_button:hover::before {
+  top: -30px;
+  left: -30px;
+}

@@ -1,0 +1,38 @@
+.memo_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-height: 400px;
+  overflow: scroll;
+}
+
+.memo_input {
+  position: absolute;
+  top: 12%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: azure;
+  width: 90%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+.memo_title_size {
+  width: 20%;
+}
+
+.memo_content_size {
+  width: 52%;
+}
+
+.memo_flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  overflow:auto;
+}
