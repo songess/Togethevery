@@ -8,7 +8,7 @@
 }
 
 .memo_input {
-  position: absolute;
+  position: fixed;
   top: 12%;
   display: flex;
   justify-content: space-between;

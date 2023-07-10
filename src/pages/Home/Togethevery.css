@@ -1,17 +1,4 @@
-.navigation_bar {
-  width: 90%;
-  position:absolute;
-  top:20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 5px 5px 0px #666666, -5px -5px 0px #ffffff;
-  font-weight: 900;
-  font-size: 25px;
-}
+
 
 .sec_button {
   margin-top: 30px;

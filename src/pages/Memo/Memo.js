@@ -3,7 +3,6 @@ import MemoList from "./MemoList";
 import Input from "../../components/Input";
 import "./Memo.css";
 import ColorButton from "../../components/ColorButton";
-import { v4 as uuidv4 } from "uuid";
 import { db } from "../../backend/firebase";
 import {
   addDoc,
@@ -13,28 +12,19 @@ import {
   doc,
   updateDoc,
 } from "firebase/firestore";
+import DefaultModal from "../../modal/DefaultModal";
+import useModal from "../../hooks/useModal";
 
 export default function Memo() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  // const [contents, setContents] = useState([
-  //   {
-  //     title: "행궁동",
-  //     content: "수원에 가면 행궁동을 꼭 가봐야 한대요",
-  //     id: uuidv4(),
-  //   },
-  //   {
-  //     title: "광장시장",
-  //     content: "광장시장에 가면 육회가 그렇게 맛있다던데",
-  //     id: uuidv4(),
-  //   },
-  // ]}
   const [contents, setContents] = useState([]);
+  const { isOpen, toggle } = useModal();
 
   const createMemo = async () => {
     try {
       const collectionRef = collection(db, "Memo");
-      const docRef = await addDoc(collectionRef, {
+      await addDoc(collectionRef, {
         title: title,
         content: content,
       });
@@ -50,7 +40,6 @@ export default function Memo() {
           return { ...doc.data(), id: doc.id };
         })
       );
-      // setContents(prev=>memoSnapShot.docs);
     } catch (error) {
       console.error("Error happened:", error);
     }
@@ -63,10 +52,10 @@ export default function Memo() {
       console.error("Error happened", error);
     }
   };
-  const updateMemo = async (editContent,id) => {
+  const updateMemo = async (editContent, id) => {
     try {
-      const docRef=doc(db,"Memo",id);
-      await updateDoc(docRef,{content:editContent});
+      const docRef = doc(db, "Memo", id);
+      await updateDoc(docRef, { content: editContent });
     } catch (error) {
       console.error("Error happened:", error);
     }
@@ -80,39 +69,22 @@ export default function Memo() {
   };
   const submitHandler = (event) => {
     event.preventDefault();
-    // setContents((prev) => [
-    //   ...prev,
-    //   { title: title, content: content, id: uuidv4() },
-    // ]);
-    // setTitle("");
-    // setContent("");
-    createMemo();
-    readMemo();
+    if (title.trim() === "" || content.trim() === "") {
+      toggle();
+    } else {
+      createMemo();
+      readMemo();
+      setTitle("");
+      setContent("");
+    }
   };
 
   const deleteHandler = (id) => {
-    // setContents((prev) => prev.filter((item) => item.id !== id));
     deleteMemo(id);
     readMemo();
   };
   const contentChangeHandler = (editContent, id) => {
-    // const idx = contents.findIndex((ctt) => ctt.content === content);
-    // const newContent = {
-    //   title: contents[idx].title,
-    //   content: editContent,
-    //   id: uuidv4(),
-    // };
-    // setContents((prev) =>
-    //   prev.map((item, i) => {
-    //     if (i === idx) {
-    //       return newContent;
-    //     }
-    //     return item;
-    //   })
-    // );
-    // //prev는 불변성을 띈데요..
-    // //splice는 변경, map은 새로운거 반환
-    updateMemo(editContent,id);
+    updateMemo(editContent, id);
     readMemo();
   };
 
@@ -155,6 +127,7 @@ export default function Memo() {
           })}
         </div>
       </div>
+      <DefaultModal isOpen={isOpen} onClose={toggle}><p>제목과 내용을 입력하세요!</p></DefaultModal>
     </>
   );
 }

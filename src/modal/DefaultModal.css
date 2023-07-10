@@ -1,0 +1,52 @@
+.defaultModal_background {
+  background-color: rgba(128,128,128,0.9);
+
+  width: 100vw;
+  height: 100vh;
+  z-index: 998;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.defaultModal {
+  width: 400px;
+  height: 200px;
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 30px;
+  border-radius: 23px;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 0px #a7a7a7;
+}
+
+.defaultModal_title {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+
+.defaultModal_button_close {
+  border: none;
+  background-color: rgb(162, 162, 162);
+  font-size: 15px;
+  width: 64px;
+  height: 40px;
+  color: white;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.defaultModal_button_close:hover {
+  background-color: rgb(122, 122, 122);
+  cursor: pointer;
+}
+
+.defaultModal_button {
+  display: flex;
+  justify-content: center;
+}

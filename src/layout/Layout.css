@@ -2,4 +2,21 @@
   width: 90%;
   display: flex;
   justify-content: center;
+  position: relative;
 }
+
+.navigation_bar {
+  width: 90%;
+  position:fixed;
+  top:20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 5px 5px 0px #666666, -5px -5px 0px #ffffff;
+  font-weight: 900;
+  font-size: 25px;
+}
+
