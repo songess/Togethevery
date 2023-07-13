@@ -7,8 +7,8 @@ import ColorButton from "../../components/ColorButton";
 import { useNavigate } from "react-router-dom";
 
 let acceptLogin = [
-  { name: "은수", id: "songess", pw: "0" },
-  { name: "채원", id: "star7602", pw: "0" },
+  { name: "eunsu", id: "songess", pw: "0" },
+  { name: "chaewon", id: "star7602", pw: "0" },
 ];
 
 const Login = () => {

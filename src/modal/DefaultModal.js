@@ -20,11 +20,6 @@ export default function DefaultModal({ isOpen, onClose, children }) {
     >
       <div className="defaultModal">
         <h1 className="defaultModal_title">{children}</h1>
-        <div className="defaultModal_button">
-          <button onClick={onClose} className="defaultModal_button_close">
-            확인
-          </button>
-        </div>
       </div>
     </div>,
     modalRoot

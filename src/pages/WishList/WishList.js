@@ -5,7 +5,7 @@ import WishListContent from "./WishListContent";
 
 export default function WishList() {
   const user = localStorage.getItem("loggedIn");
-  const oppenent = user === "은수" ? "채원" : "은수";
+  const oppenent = user === "eunsu" ? "chaewon" : "eunsu";
   return (
     <div className="wishlist_wrapper">
       <header className="wishlist_title">WishList</header>

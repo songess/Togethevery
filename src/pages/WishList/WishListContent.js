@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import context from "../../context/context";
 import "./WishListContent.css";
-
+import WishListContentmember from "./WishListContentmember";
 
 export default function WishListContent() {
-  
-  return <div>WishListContent</div>;
+  const { eunsuList, chaewonList } = useContext(context);
+  return <div className="wishlistcontent">{eunsuList.map(item=>{
+    <WishListContentmember content={item.content}></WishListContentmember>
+  })}</div>;
 }

@@ -14,6 +14,7 @@ import {
 } from "firebase/firestore";
 import DefaultModal from "../../modal/DefaultModal";
 import useModal from "../../hooks/useModal";
+import ModalButton from "../../components/ModalButton";
 
 export default function Memo() {
   const [title, setTitle] = useState("");
@@ -127,7 +128,12 @@ export default function Memo() {
           })}
         </div>
       </div>
-      <DefaultModal isOpen={isOpen} onClose={toggle}><p>제목과 내용을 입력하세요!</p></DefaultModal>
+      <DefaultModal isOpen={isOpen} onClose={toggle}>
+        <>
+          <p>제목과 내용을 입력하세요!</p>
+          <ModalButton className="memomodalok" onClick={toggle}>확인</ModalButton>
+        </>
+      </DefaultModal>
     </>
   );
 }

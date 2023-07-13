@@ -10,3 +10,39 @@
   height: 10vh;
   overflow: auto;
 }
+
+.wishlist_list_delete {
+  background-color: red;
+}
+
+.wishlist_list_delete:hover {
+  background-color: rgb(152, 2, 2);
+}
+
+.wishlist_list_close {
+  background-color: rgb(162,162,162);
+}
+
+.wishlist_list_close:hover {
+  background-color: rgb(122,122,122);
+}
+
+.wishbuttons {
+  margin-top: 20px;
+}
+
+.wishlist_deletemodal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wishlist_list_insert {
+  margin-top: 10px;
+  background-color: rgb(162,162,162);
+}
+
+.wishlist_list_insert:hover {
+  background-color: rgb(122,122,122);
+}
