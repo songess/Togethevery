@@ -5,7 +5,13 @@ import WishListContentmember from "./WishListContentmember";
 
 export default function WishListContent() {
   const { eunsuList, chaewonList } = useContext(context);
-  return <div className="wishlistcontent">{eunsuList.map(item=>{
-    <WishListContentmember content={item.content}></WishListContentmember>
-  })}</div>;
+  return (
+    <div className="wishlistcontent">
+      {eunsuList?.map((item) => {
+        return (
+          <WishListContentmember content={item.content} key={item.id}></WishListContentmember>
+        );
+      })}
+    </div>
+  );
 }

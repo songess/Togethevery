@@ -1,10 +1,11 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import "./WishListMain.css";
 import ColorButton from "../../components/ColorButton";
 import DefaultModal from "../../modal/DefaultModal";
 import useModal from "../../hooks/useModal";
 import Input from "../../components/Input";
 import context from "../../context/context";
+import WishListContentmember from "./WishListContentmember";
 import { db } from "../../backend/firebase";
 import {
   addDoc,
@@ -33,12 +34,16 @@ export default function WishListMain({ user }) {
   };
   const readList = async () => {
     try {
-      const listSnapshot = await getDocs(db, user);
-      setEunsuList(
-        listSnapshot.docs.map((doc) => {
-          return { ...doc.data(), id: doc.id };
-        })
-      );
+      const listSnapshot = await getDocs(collection(db, user));
+      listSnapshot.docs?.map((doc) => {
+        // console.log(doc.data().content, doc.id);
+        return (
+          <WishListContentmember
+            content={doc.data().content}
+            key={doc.id}
+          ></WishListContentmember>
+        );
+      });
     } catch (error) {
       console.error("Error happened: ", error);
     }
@@ -72,11 +77,14 @@ export default function WishListMain({ user }) {
     setList(e.target.value);
   };
   const listAddHandler = () => {
-    console.log(lists);
     createList();
     readList();
     toggle();
   };
+
+  useEffect(() => {
+    readList();
+  }, []);
 
   return (
     <div className="wishlist_main">

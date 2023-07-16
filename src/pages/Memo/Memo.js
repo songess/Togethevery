@@ -36,6 +36,7 @@ export default function Memo() {
   const readMemo = async () => {
     try {
       const memoSnapShot = await getDocs(collection(db, "Memo"));
+      console.log("나도 두번실행돼?");
       setContents(
         memoSnapShot.docs.map((doc) => {
           return { ...doc.data(), id: doc.id };
@@ -130,7 +131,7 @@ export default function Memo() {
       </div>
       <DefaultModal isOpen={isOpen} onClose={toggle}>
         <>
-          <p>제목과 내용을 입력하세요!</p>
+          <p className="memomodalp">제목과 내용을 입력하세요!</p>
           <ModalButton className="memomodalok" onClick={toggle}>확인</ModalButton>
         </>
       </DefaultModal>
