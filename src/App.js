@@ -6,7 +6,7 @@ import Memo from "./pages/Memo/Memo";
 import Map from "./pages/Map/Map";
 import WishList from "./pages/WishList/WishList";
 import Movie from "./pages/Movie/Movie";
-import Diary from "./pages/Diary/DIary";
+import Diary from "./pages/Diary/Diary";
 import ContextProvider from "./context/ContextProvider";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 

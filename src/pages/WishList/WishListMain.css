@@ -1,7 +1,7 @@
 .wishlist_main {
   display: flex;
   justify-content: space-around;
-  width: 500px;
+  align-items: center;
 }
 
 .wishlist_input {
@@ -45,4 +45,8 @@
 
 .wishlist_list_insert:hover {
   background-color: rgb(122,122,122);
+}
+
+.wishlist_main_title {
+  margin: 15px;
 }

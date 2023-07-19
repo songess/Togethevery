@@ -1,0 +1,35 @@
+.diary_wrapper {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.diary_year {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.diary {
+  display: flex;
+}
+
+.diary_info {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+}
+
+.diary_month {
+  background-color: white;
+  border-radius: 5px;
+  width: 400px;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.diary_content {
+  margin: 50px;
+}

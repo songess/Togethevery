@@ -4,7 +4,8 @@ import context from "./context";
 export default function ContextProvider({ children }) {
   const [loginId, setLoginId] = useState(false);
   const [eunsuList, setEunsuList] = useState([]);
-  const [ChaewonList, setChaewonList] = useState([]);
+  const [chaewonList, setChaewonList] = useState([]);
+  const [eunsuCheckList,setEunsuCheckList]=useState([]);
 
   return (
     <context.Provider
@@ -13,8 +14,10 @@ export default function ContextProvider({ children }) {
         setLoginId,
         eunsuList,
         setEunsuList,
-        ChaewonList,
+        chaewonList,
         setChaewonList,
+        eunsuCheckList,
+        setEunsuCheckList,
       }}
     >
       {children}

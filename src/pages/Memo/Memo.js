@@ -36,7 +36,6 @@ export default function Memo() {
   const readMemo = async () => {
     try {
       const memoSnapShot = await getDocs(collection(db, "Memo"));
-      console.log("나도 두번실행돼?");
       setContents(
         memoSnapShot.docs.map((doc) => {
           return { ...doc.data(), id: doc.id };

@@ -1,4 +1,4 @@
-.wishlistmember_wrapper {
+.wishlistopponentmember_wrapper {
   width: 90%;
   padding: 10px;
   display: flex;
@@ -6,12 +6,7 @@
   border-bottom: 1px solid lightgray;
 }
 
-.wishlistmember_content {
+.wishlistopponentmember_content {
   /* max-height: 2.5vh; */
   overflow: auto;
-}
-
-.member_clicked {
-  background-color: lightGray;
-  color:white;
 }

@@ -1,31 +1,32 @@
 import React, { useState, useContext } from "react";
 import context from "../../context/context";
-import "./WishListContent.css";
+import "./WishListOpponentContent.css";
 import WishListContentmember from "./WishListContentmember";
+import WishListOpponentContentmember from "./WishListOpponentContentmember";
 
-export default function WishListContent({ user }) {
+export default function WishListOpponentContent({ user }) {
   const { eunsuList, chaewonList } = useContext(context);
   return (
-    <div className="wishlistcontent">
+    <div className="wishlistOpponentcontent">
       {user === "eunsu"
         ? eunsuList?.map((item) => {
             return (
-              <WishListContentmember
+              <WishListOpponentContentmember
                 content={item.content}
                 id={item.id}
                 key={item.id}
                 user={user}
-              ></WishListContentmember>
+              ></WishListOpponentContentmember>
             );
           })
         : chaewonList?.map((item) => {
             return (
-              <WishListContentmember
+              <WishListOpponentContentmember
                 content={item.content}
                 id={item.id}
                 key={item.id}
                 user={user}
-              ></WishListContentmember>
+              ></WishListOpponentContentmember>
             );
           })}
     </div>
