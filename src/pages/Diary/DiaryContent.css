@@ -1,0 +1,26 @@
+.diarycontent {
+  margin: 50px;
+  width: 400px;
+  background-color: white;
+}
+
+.diarycontent_title {
+  margin: 10px;
+  width: 90%;
+  background-color: lightgray;
+}
+
+.diarycontent_content {
+  margin: 10px;
+  width: 90%;
+  height: 20vh;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  resize: none;
+  background-color: lightgray;
+}
+
+.diarycontent_content:focus {
+  outline: none;
+}

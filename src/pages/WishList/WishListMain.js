@@ -20,7 +20,6 @@ export default function WishListMain({ user }) {
     useContext(context);
 
   const [list, setList] = useState("");
-  const [lists, setLists] = useState([]);
   // const createList = async () => {
   //   try {
   //     const collectionRef = collection(db, user);

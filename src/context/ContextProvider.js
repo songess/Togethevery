@@ -6,6 +6,7 @@ export default function ContextProvider({ children }) {
   const [eunsuList, setEunsuList] = useState([]);
   const [chaewonList, setChaewonList] = useState([]);
   const [eunsuCheckList,setEunsuCheckList]=useState([]);
+  const [chaewonCheckList,setChaewonCheckList]=useState([]);
 
   return (
     <context.Provider
@@ -18,6 +19,8 @@ export default function ContextProvider({ children }) {
         setChaewonList,
         eunsuCheckList,
         setEunsuCheckList,
+        chaewonCheckList,
+        setChaewonCheckList,
       }}
     >
       {children}

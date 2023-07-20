@@ -1,6 +1,7 @@
 import React from "react";
 import "./Diary.css";
 import DiaryList from "./DiaryList";
+import DiaryContent from "./DiaryContent";
 
 export default function Diary() {
   return (
@@ -14,7 +15,7 @@ export default function Diary() {
             <DiaryList></DiaryList>
           </div>
         </div>
-        <div className="diary_content">Content</div>
+        <DiaryContent></DiaryContent>
       </div>
     </div>
   );

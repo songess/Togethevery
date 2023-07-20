@@ -28,8 +28,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.diary_content {
-  margin: 50px;
+  font-weight: 700;
 }
