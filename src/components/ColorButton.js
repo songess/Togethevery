@@ -1,8 +1,10 @@
-import React from 'react'
-import "./ColorButton.css"
+import React from "react";
+import "./ColorButton.css";
 
-export default function ColorButton(props) {
+export default function ColorButton({ className, onClick, children }) {
   return (
-    <button className="color_button" onClick={props.onClick}>{props.children}</button>
-  )
+    <button className={`${className} color_button`} onClick={onClick}>
+      {children}
+    </button>
+  );
 }
