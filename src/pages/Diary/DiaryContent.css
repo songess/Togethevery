@@ -1,6 +1,8 @@
 .diarycontent {
   margin: 30px;
+  padding: 10px;
   width: 400px;
+  height: 40vh;
   background-color: white;
   border-radius: 10px;
   display: flex;

@@ -18,6 +18,8 @@
   display: flex;
   flex-direction: column;
   margin: 30px;
+  max-height: 40vh;
+  overflow:auto;
 }
 
 .diary_month {

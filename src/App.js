@@ -35,7 +35,6 @@ function App() {
               <Route path="/Memo" element={<Memo></Memo>}></Route>
               <Route path="/Map" element={<Map></Map>}></Route>
               <Route path="/WishList" element={<WishList></WishList>}></Route>
-              <Route path="/Movie" element={<Movie></Movie>}></Route>
               <Route path="/Diary" element={<Diary></Diary>}></Route>
             </Routes>
           </Layout>

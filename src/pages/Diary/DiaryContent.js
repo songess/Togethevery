@@ -6,24 +6,20 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import useCreateFs from "../../hooks/useCreateFs";
 
-export default function DiaryContent() {
+const dayToString = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+export default function DiaryContent({ createDiary }) {
   const [diaryTitle, setDiaryTitle] = useState("");
   const [diaryContent, setDiaryContent] = useState("");
   const [startDate, setStartDate] = useState(new Date());
-  const [diaryDate, setDiaryDate] = useState({
-    year: new Date().getFullYear(),
-    month: new Date().getMonth() + 1,
-    day: new Date().getDate(),
-  });
-  const { create_sub } = useCreateFs();
 
   const clickHandler = () => {
-    console.log(diaryDate, diaryTitle, diaryContent);
-    create_sub(diaryDate.year.toString(),diaryDate.month.toString(),diaryDate.day.toString(), {
-      day: diaryDate.day,
-      title: diaryTitle,
-      content: diaryContent,
-    });
+    createDiary(
+      startDate.getDate(),
+      dayToString[startDate.getDay()],
+      diaryTitle,
+      diaryContent
+    );
   };
   const titleHandler = (e) => {
     setDiaryTitle(e.target.value);

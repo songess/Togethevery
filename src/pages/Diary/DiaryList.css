@@ -1,9 +1,10 @@
 .diarylist_wrapper {
   display: flex;
   background-color: white;
-  border: 1px solid lightgray;
+  border: 1px solid rgb(70, 70, 70);
   border-radius: 5px;
   width: 400px;
+  margin-top: 5px;
 }
 
 .diarylist_day {

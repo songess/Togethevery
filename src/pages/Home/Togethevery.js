@@ -28,9 +28,6 @@ export default function Togethevery() {
           <Link className="button_link" to="/WishList">
             <Button>위시리스트</Button>
           </Link>
-          <Link className="button_link" to="/Movie">
-            <Button>영화</Button>
-          </Link>
           <Link className="button_link" to="/Diary">
             <Button>일기</Button>
           </Link>
